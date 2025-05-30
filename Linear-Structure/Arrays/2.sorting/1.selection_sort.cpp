@@ -11,7 +11,7 @@ void selection_sort(int arr[],int size){
         for(int j=i+1;j<size;j++){
             if(arr[j]<arr[minIndex])minIndex=j;
         }        
-        if(minIndex !=i)swap(arr[i],arr[minIndex]);
+        swap(arr[i],arr[minIndex]);
     }
 }
 
