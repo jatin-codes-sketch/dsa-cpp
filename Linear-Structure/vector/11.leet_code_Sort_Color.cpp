@@ -20,6 +20,7 @@ void SortColor(vector<int>&vec){
         }
         
     }
+    return ;
     
 }
 
