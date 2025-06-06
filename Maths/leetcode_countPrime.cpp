@@ -22,7 +22,7 @@ int count_prime(int n){
 int main(){
     
     int n;
-    cout<<"enter the range from where we count the prime numbers: ";
+    cout<<"enter the range where we count the prime numbers: ";
     cin>>n;
     
     cout<<count_prime(n);
