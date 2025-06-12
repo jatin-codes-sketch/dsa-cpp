@@ -26,3 +26,7 @@ vector<int> missingAndDuplicate(vector<vector<int>>&grid){
 
     return ans;
 }
+
+int main(){
+    return 0;
+}
