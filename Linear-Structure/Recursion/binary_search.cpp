@@ -9,7 +9,7 @@ int BS(vector<int>&arr,int n,int target,int start,int end){
         if(arr[mid]>target)return BS(arr,n,target,start,mid-1);
         if(arr[mid<target])return BS(arr,n,target,mid+1,end);
     }
-    return -1;
+    return -2;
 }
 
 int binarySearch(vector<int>&arr,int n,int target){
