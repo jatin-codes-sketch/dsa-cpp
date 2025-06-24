@@ -66,6 +66,11 @@ void solveSudoku(vector<vector<char>>&board){
     
     
     }
+
+
+int main(){
+    return 0;
+}
     
     
     
