@@ -23,6 +23,12 @@ int longestSubstringWithoutDuplicate(string s){
 
 int main(){
     
+    string s;
+    cout<<"enter the string: "<<endl;
+    cin>>s;
+    
+    int n=longestSubstringWithoutDuplicate(s);
+    cout<<"the longest substring length is "<<n<<endl;
     
     return 0;
 }
