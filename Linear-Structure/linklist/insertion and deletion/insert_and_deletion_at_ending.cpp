@@ -43,8 +43,8 @@ class Linklist{
             while(temp->next!=nullptr){
                 temp=temp->next;
             }
+            temp->next=newnode;
         }
-        temp->next=newnode;
     }
     
     void deleteAtEnding(){
@@ -61,5 +61,54 @@ class Linklist{
         temp->next=nullptr;
     }
 };
+
+int main(){
+    Linklist ll;
+    
+    ll.insertAtbegining(10);
+    ll.insertAtbegining(20);
+    ll.insertAtbegining(30);
+    
+    cout<<"List after insertion at beginning: ";
+    Node* temp=ll.head;
+    while(temp){
+        cout<<temp->value<<" ";
+        temp=temp->next;
+    }
+    cout<<endl;
+    
+    ll.deleteAtBegining();
+    
+    cout<<"List after deletion at beginning: ";
+    temp=ll.head;
+    while(temp){
+        cout<<temp->value<<" ";
+        temp=temp->next;
+    }
+    cout<<endl;
+
+    ll.insertAtEnding(40);
+    ll.insertAtEnding(50);
+    
+    cout<<"List after insertion at ending: ";
+    temp=ll.head;
+    while(temp){
+        cout<<temp->value<<" ";
+        temp=temp->next;
+    }
+    cout<<endl;
+
+    ll.deleteAtEnding();
+    
+    cout<<"List after deletion at ending: ";
+    temp=ll.head;
+    while(temp){
+        cout<<temp->value<<" ";
+        temp=temp->next;
+    }
+    cout<<endl;
+
+    return 0;
+}
 
 
