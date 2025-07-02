@@ -35,6 +35,34 @@ class Linklist{
     }
 };
 
+int main(){
+    Linklist ll;
+    
+    ll.insertAtbegining(10);
+    ll.insertAtbegining(20);
+    ll.insertAtbegining(30);
+    
+    cout<<"List after insertion at beginning: ";
+    Node* temp=ll.head;
+    while(temp){
+        cout<<temp->value<<" ";
+        temp=temp->next;
+    }
+    cout<<endl;
+    
+    ll.deleteAtBegining();
+    
+    cout<<"List after deletion at beginning: ";
+    temp=ll.head;
+    while(temp){
+        cout<<temp->value<<" ";
+        temp=temp->next;
+    }
+    cout<<endl;
+    
+    return 0;
+}
+
 
 
 
