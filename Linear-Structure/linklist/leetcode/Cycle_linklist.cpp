@@ -35,3 +35,19 @@ class Linklist{
         return false;
     }
 };
+
+int main(){
+    Linklist ll;
+    ll.head = new Node(1);
+    ll.head->next = new Node(2);
+    ll.head->next->next = new Node(3);
+    ll.head->next->next->next = ll.head; // Creating a cycle for testing
+
+    if(ll.linklistCycle(ll.head)){
+        cout << "Cycle detected in the linked list." << endl;
+    } else {
+        cout << "No cycle detected in the linked list." << endl;
+    }
+
+    return 0;
+}
