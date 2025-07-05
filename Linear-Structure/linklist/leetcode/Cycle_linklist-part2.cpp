@@ -20,34 +20,35 @@ class Linklist{
         head=nullptr;
     }
     
-    bool linklistCycle(Node* head){
+    Node* linklistCycle(Node* head){
         Node* slow=head;
         Node* fast=head;
+        bool isCycle=false;
         
         while(fast!=nullptr && fast->next!=nullptr){
             slow=slow->next;
             fast=fast->next->next;
             
             if(slow==fast){
-                return true;
+                isCycle=true;
+                break;
             }
         }
-        return false;
+        
+        if(!isCycle){
+            return nullptr;
+        }else{
+            slow=head;
+            
+            while(slow!=fast){
+                slow=slow->next;
+                fast=fast->next;
+            }
+            return slow;
+        }
     }
 };
 
 int main(){
-    Linklist ll;
-    ll.head = new Node(1);
-    ll.head->next = new Node(2);
-    ll.head->next->next = new Node(3);
-    ll.head->next->next->next = ll.head; // Creating a cycle for testing
-
-    if(ll.linklistCycle(ll.head)){
-        cout << "Cycle detected in the linked list." << endl;
-    } else {
-        cout << "No cycle detected in the linked list." << endl;
-    }
-
     return 0;
 }
