@@ -1,3 +1,42 @@
+#include<iostream>
+using namespace std;
+
+class Node {
+public:
+    int value;
+    Node* next;
+    
+    Node(int val){
+        this->value = val;
+        next = nullptr;
+    }
+};
+
+class linkList {
+public:
+    Node* head;
+    
+    linkList(){
+        head = nullptr;
+    }
+
+    // Merge two sorted linked lists recursively
+    Node* mergeTwoSortedList(Node* head1, Node* head2) {
+        // Base cases
+        if (head1 == nullptr) return head2;
+        if (head2 == nullptr) return head1;
+
+        // Recursive merging
+        if (head1->value <= head2->value) {
+            head1->next = mergeTwoSortedList(head1->next, head2);
+            return head1;
+        } else {
+            head2->next = mergeTwoSortedList(head1, head2->next);
+            return head2;
+        }
+    }
+};
+
 void printList(Node* head) {
     while (head != nullptr) {
         cout << head->value << " ";
