@@ -2,6 +2,15 @@
 #include<unordered_map>
 using namespace std;
 
+class Node {
+public:
+    int value;
+    Node* next;
+    Node* random;
+    
+    Node(int val) : value(val), next(nullptr), random(nullptr) {}
+};
+
 Node* copyList(Node* head){
     
     if(head==nullptr)return nullptr;
@@ -32,4 +41,8 @@ Node* copyList(Node* head){
     }
     
     return newHead;
+}
+
+int main(){
+    return 0;
 }
