@@ -19,11 +19,11 @@ class minStack{
         s.pop();
     }
     
-    void top(){
+    int top(){
         s.top().first;
     }
     
-    void getMin(){
+    int getMin(){
         s.top().second;
     }
 };
@@ -31,3 +31,5 @@ class minStack{
 int main(){
     return 0;
 }
+
+
