@@ -53,5 +53,6 @@ int main() {
 
     cout << "Front after pop: " << q.front() << endl; // Should print 20
 
+    
     return 0;
 }
