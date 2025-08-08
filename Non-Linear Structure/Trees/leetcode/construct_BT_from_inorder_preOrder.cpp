@@ -9,7 +9,14 @@ struct Node {
     Node(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
-
+int search(vector<int>& inorder, int left, int right, int val) {
+    for (int i = left; i <= right; i++) {
+        if (inorder[i] == val) {
+            return i;
+        }
+    }
+    return -1;
+}
 
 Node* helper(vector<int>& preorder, vector<int>& inorder, int& preIdx, int left, int right) {
     if (left > right) return nullptr;
