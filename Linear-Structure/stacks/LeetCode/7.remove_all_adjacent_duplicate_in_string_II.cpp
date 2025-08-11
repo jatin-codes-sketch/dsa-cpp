@@ -5,7 +5,7 @@
 using namespace std;
 
 string removeDuplicate(string str, int k) {
-    stack<pair<char, int>> s; // store (char, count)
+    stack<pair<char, int>> s; 
     
     for (char c : str) {
         if (!s.empty() && s.top().first == c) {
@@ -31,6 +31,6 @@ string removeDuplicate(string str, int k) {
 int main() {
     string str = "deeedbbcccdbaa";
     string ans = removeDuplicate(str, 3);
-    cout << ans; // should print "aa"
+    cout << ans; 
     return 0;
 }
